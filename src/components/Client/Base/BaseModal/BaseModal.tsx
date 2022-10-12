@@ -9,7 +9,11 @@ export function BaseModal(props: ModalInterface): JSX.Element {
 
   useEffect(() => {
     const body = document.querySelector('body') as HTMLElement;
-    body.classList.toggle('overflow-y-hidden');
+    if (showModal) {
+      body.classList.add('overflow-y-hidden');
+    } else {
+      body.classList.remove('overflow-y-hidden');
+    }
   }, [showModal])
 
   return (
