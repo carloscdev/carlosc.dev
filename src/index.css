@@ -5,14 +5,15 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #4e73df;
-  --primary-color-light: #7094ff;
-  --secondary-color: #10172a;
-  --secondary-color-light: #4274e74d;
-  --black-color: #1b2c5d;
-  --white-color: #fff;
+  --primary-color: #1484da;
+  --primary-color-light: #349ff1;
+  --secondary-color: #1c1e22;
+  --secondary-color-light: #31343a;
+  --black-color: #082b47;
   --gray-color: #f1f5f9;
 }
+
+/* General Styles */
 
 * {
   box-sizing: border-box;
@@ -22,8 +23,13 @@ html {
   @apply text-custom-black;
 }
 
+.bg-custom {
+  background-image: url('./assets/dot.png');
+}
+
 body {
   @apply bg-custom-gray;
+  background-image: url('./assets/dot.png');
 }
 
 .content {
@@ -57,15 +63,37 @@ h2 {
   @apply absolute -left-4 top-1.5 w-1.5 h-1.5 rounded-full bg-primary;
 }
 
-.custom-modal main {
-  animation: fade-up 0.3s ease-in-out;
-  animation-fill-mode: forwards;
-  position: relative;
-  bottom: -100vh;
-}
+/* Animations */
 
 @keyframes fade-up {
-  to {
-    bottom: 0;
-  }
+  40% { bottom: 10vh; }
+  70% { bottom: -5vh; }
+  100% { bottom: 0; }
+}
+
+.up-animation {
+  @apply hover:-translate-y-1 ease-in-out;
+  transition: transform 0.3s;
+}
+
+.in {
+  opacity: 1;
+}
+.out {
+  opacity: 0;
+  transform: scale(0.2);
+}
+
+/* Forms */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+select,
+textarea {
+  @apply w-full px-3 h-12 rounded-lg text-sm bg-white text-custom-black focus:outline-none border focus:shadow-button;
+}
+textarea {
+  @apply h-auto py-3;
 }

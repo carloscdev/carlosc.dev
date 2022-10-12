@@ -36,7 +36,7 @@ export function Stats() {
   ]
 
   return (
-    <section className="bg-primary text-white py-20">
+    <section className="bg-primary text-white py-20 bg-custom">
       <div className="content">
         <ul className="grid md:grid-cols-4 gap-10">
           {

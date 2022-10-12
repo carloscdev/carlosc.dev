@@ -134,7 +134,7 @@ export function Experience() {
                       </span>
                     </h5>
                   </div>
-                  <MdKeyboardArrowDown className={`text-2xl ease-in duration-100 ${currentExperience === index && 'rotate-180'}`} />
+                  <MdKeyboardArrowDown className={`text-2xl ease-in duration-300 ${currentExperience === index && 'rotate-180'}`} />
                 </div>
                 {
                   index === currentExperience &&

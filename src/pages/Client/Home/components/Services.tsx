@@ -31,46 +31,46 @@ export function Services(): JSX.Element{
     {
       icon: Code,
       title: 'Desarrollo Web',
-      description: 'Me gusta codificar cosas desde cero y disfruto dando vida a las ideas en el navegador.'
+      description: 'Me gusta codificar cosas desde cero y disfruto dando vida a las ideas en el navegador 💻.'
     },
     {
       icon: Design,
       title: 'Diseño UI',
-      description: 'Valoro la estructura de contenido simple, los patrones de diseño limpios y las interacciones bien pensadas.'
+      description: 'Valoro la estructura de contenido simple, los patrones de diseño limpios y las interacciones bien pensadas 🎨.'
     },
     {
       icon: Teach,
       title: 'Mentorías',
-      description: 'Realmente me preocupo por las personas que van comenzando y me encanta ayudar compartiendo conocimientos.'
+      description: 'Realmente me preocupo por las personas que van comenzando en el desarrollo front-end y me encanta ayudar compartiendo conocimientos 👨‍🏫.'
     },
     {
       icon: Tutorial,
       title: 'Cursos / Tutoriales',
-      description: 'Realmente me preocupo por las personas que van comenzando y me encanta ayudar compartiendo conocimientos.'
+      description: 'Puedes encontrar todos mis tutoriales en mi canal de Youtube y mis cursos en la plataforma de Udemy 📚.'
     },
     {
       icon: Asesor,
       title: 'Asesorías',
-      description: 'Realmente me preocupo por las personas que van comenzando y me encanta ayudar compartiendo conocimientos.'
+      description: 'Te ayudo a mejorar tu CV y marca personal para que puedas proyectar una imagen que sobresalga y sea atrayente 🚀.'
     }
   ]
 
   return (
-    <section className="bg-secondary">
+    <section className="bg-secondary bg-custom shadow">
       <div className="py-20 content text-white grid md:grid-cols-[0.4fr,_1fr] gap-10 text-sm">
         <div>
           <h3 className="text-3xl font-semibold mb-5">
             ¿Interesado en trabajar conmigo?
           </h3>
           <p className="opacity-70">
-            Mis Principales competencias están relacionadas al desarrollo / diseño web, creación de contenido audiovisual y enseñanza online.
+            Mis principales competencias profesionales están relacionadas al desarrollo / diseño web, creación de contenido audiovisual y enseñanza online.
           </p>
         </div>
         <ul className="grid grid-cols-2 md:grid-cols-3 items-center gap-5">
           {
             serviceList.map((item, index) => (
-              <li key={index} className="flex items-center gap-3 px-5 h-28 rounded-lg bg-white/5 cursor-pointer hover:-translate-y-1 ease-in duration-100" onClick={() => handleCurrentService(item)}>
-                <img src={item.icon} alt={item.title} width="50" />
+              <li key={index} className="flex items-center gap-3 px-5 h-24 rounded-lg bg-secondary-light cursor-pointer up-animation" onClick={() => handleCurrentService(item)}>
+                <img src={item.icon} alt={item.title} width="45" height="45" />
                 <h4 className="font-semibold">{ item.title }</h4>
               </li>
             ))
@@ -85,7 +85,7 @@ export function Services(): JSX.Element{
           <section>
             <div className="flex items-center gap-5">
               <img src={currentService?.icon} alt={currentService?.title} width="70" />
-              <h4 className="font-semibold text-lg">{ currentService?.title }</h4>
+              <h3 className="font-semibold text-lg">{ currentService?.title }</h3>
             </div>
             <hr />
             <p className="pt-10">

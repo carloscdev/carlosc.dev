@@ -2,7 +2,7 @@
   @apply
     flex w-fit border-2 border-transparent
     items-center justify-center outline-none
-    rounded text-custom-white cursor-pointer font-semibold;
+    rounded text-white cursor-pointer font-semibold;
 }
 
 .custom-button.primary {

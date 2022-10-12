@@ -1,0 +1,7 @@
+.custom-modal main {
+  animation: fade-up 0.5s ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  position: relative;
+  bottom: -100vh;
+}

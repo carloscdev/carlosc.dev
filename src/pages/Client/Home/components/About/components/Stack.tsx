@@ -33,7 +33,7 @@ export function Stack(): JSX.Element{
         <ul className="flex items-center justify-between gap-5 p-10 flex-wrap">
           {
             stackList.map((item, index): JSX.Element=> (
-              <li key={index} className="flex h-16 w-16 border rounded-full items-center justify-center hover:-translate-y-1 ease-in duration-100">
+              <li key={index} className="flex h-16 w-16 border rounded-full items-center justify-center up-animation">
                 <img src={item} alt="Stack Icon" width="40" height="40" loading="lazy" />
               </li>
             ))

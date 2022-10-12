@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ContactForm, BaseModal, BaseButton } from '../..';
+import { TagButtonEnum } from '../BaseButton/base-button.interface';
+import { SizeModalEnum } from '../BaseModal/base-modal.interface';
 
 export function Footer():JSX.Element {
+
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+  }
 
   const footerList = [
     {
@@ -15,18 +24,27 @@ export function Footer():JSX.Element {
     {
       title: '¿Necesitas Ayuda?',
       projects: [
-        { title: 'Discord', url: 'https://discord.gg/z9XxP4n9' },
-        { title: 'Youtube', url: 'https://www.youtube.com/c/carloscdev' },
-        { title: 'Instagram', url: 'https://instagram.com/carloscdev' },
-        { title: 'Twitter', url: 'https://twitter.com/carloscdev' },
+        { title: 'Comunidad Discord', url: 'https://discord.gg/z9XxP4n9' },
+        { title: 'Canal de Youtube', url: 'https://www.youtube.com/c/carloscdev' },
+        { title: 'DM Instagram', url: 'https://instagram.com/carloscdev' },
+        { title: 'DM Twitter', url: 'https://twitter.com/carloscdev' },
+      ]
+    },
+    {
+      title: 'Últimos Videos',
+      projects: [
+        { title: 'Palindrome Game', url: 'https://youtu.be/iVIlul7h0Jk' },
+        { title: 'Digital Clock', url: 'https://youtu.be/AMS2fbcgA14' },
+        { title: 'Dibujando con CSS', url: 'https://youtu.be/OveoOOc8bz8' },
+        { title: 'Botones 3D', url: 'https://youtu.be/zVu4KM6oM4s' },
       ]
     }
   ]
 
   return (
-    <footer className="bg-secondary border-t-[0.5px] border-gray-70">
-      <section className="border-b-[0.5px] border-gray-700 py-20 text-custom-white">
-        <div className="content grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+    <footer className="bg-secondary bg-custom">
+      <section className="border-b-[0.5px] border-gray-700 py-20 text-white">
+        <div className="content grid sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-20 items-center text-center sm:text-left">
           {
             footerList.map((item, index): JSX.Element => (
               <div className="text-sm" key={index}>
@@ -47,8 +65,20 @@ export function Footer():JSX.Element {
               </div>
             ))
           }
+          <div>
+            <h4 className="font-semibold text-center mb-5">
+              Envíame un mensaje
+            </h4>
+            <BaseButton value="Contáctame" tag={TagButtonEnum.BUTTON} action={handleShowModal} />
+          </div>
         </div>
       </section>
+      <section className="content text-center opacity-70 py-5 text-xs text-white">
+        <p className="font-semibold">Made with React JS, TypeScript & Tailwind CSS</p>
+      </section>
+      <BaseModal showModal={showModal} handleShowModal={handleShowModal} size={SizeModalEnum.SMALL}>
+        <ContactForm />
+      </BaseModal>
     </footer>
   )
 }

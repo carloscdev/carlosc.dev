@@ -11,12 +11,11 @@ module.exports = {
         "secondary": "var(--secondary-color)",
         "secondary-light": "var(--secondary-color-light)",
         "custom-black": "var(--black-color)",
-        "custom-white": "var(--white-color)",
         "custom-gray": "var(--gray-color)",
       },
       boxShadow: {
-        "button": "0 20px 30px -10px var(--secondary-color-light)",
-        "icon": "0 6px 15px -2px var(--secondary-color-light)"
+        "button": "0 0 10px -1px var(--primary-color-light)",
+        "icon": "0 0 5px -5px var(--secondary-color-light)"
       }
     },
   },

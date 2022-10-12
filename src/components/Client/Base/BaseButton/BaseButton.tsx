@@ -1,10 +1,10 @@
 import React from 'react';
-import './CustomButton.css';
+import './BaseButton.css';
 import { Link } from 'react-router-dom';
-import { PropsInterface, SizeButtonEnum, TagButtonEnum, TypeButtonEnum } from './custom-buttom.interface';
+import { PropsInterface, SizeButtonEnum, TagButtonEnum, TypeButtonEnum } from './base-button.interface';
 
 
-export function CustomButton(props: PropsInterface): JSX.Element {
+export function BaseButton(props: PropsInterface): JSX.Element {
   const {
     tag,
     type,
@@ -25,7 +25,7 @@ export function CustomButton(props: PropsInterface): JSX.Element {
   return component[tag!]
 }
 
-CustomButton.defaultProps = {
+BaseButton.defaultProps = {
   tag: TagButtonEnum.A,
   size: SizeButtonEnum.LARGE,
   type: TypeButtonEnum.PRIMARY,

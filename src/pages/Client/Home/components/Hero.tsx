@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { BaseModal, CustomButton } from '../../../../components/Client';
+import { BaseModal, BaseButton } from '../../../../components/Client';
 import { AiOutlineGithub, AiOutlineCodepen, AiOutlineYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { SiUdemy } from 'react-icons/si';
-import { TagButtonEnum, TypeButtonEnum } from '../../../../components/Client/Base/CustomButton/custom-buttom.interface';
+import { TagButtonEnum, TypeButtonEnum } from '../../../../components/Client/Base/BaseButton/base-button.interface';
 import { IconType } from 'react-icons';
 import CvCarlos from '../../../../assets/cv.pdf';
 
@@ -43,13 +43,16 @@ export function Hero(): JSX.Element {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleShowModal = () => {
-    const body = document.querySelector('body') as HTMLElement;
-    body.classList.toggle('overflow-y-hidden');
     setShowModal(!showModal);
   }
 
+  const redirectAboutMe = () => {
+    const about = document.getElementById('about') as HTMLElement;
+    window.scroll({ top: about.getBoundingClientRect().y, left: 0, behavior: "smooth" });
+  }
+
   return (
-    <section className="md:py-36 py-10 bg-secondary mt-20 min-h-[80vh] flex">
+    <section className="md:py-36 py-10 bg-secondary mt-20 min-h-[80vh] flex bg-custom">
       <div className="text-white content grid md:grid-cols-[1fr,_0.7fr] items-center justify-between gap-5 md:gap-10">
         <div>
           <h1 className="text-3xl md:text-[45px] font-semibold md:leading-[3rem]">
@@ -64,8 +67,8 @@ export function Hero(): JSX.Element {
             apasianado por la tecnología y la enseñanza online.
           </p>
           <div className="flex items-center gap-5">
-            <CustomButton value="Sobre Mi" />
-            <CustomButton value="Ver Currículum" type={TypeButtonEnum.OUTLINE} tag={TagButtonEnum.BUTTON} action={handleShowModal}  />
+            <BaseButton value="Sobre Mi" tag={TagButtonEnum.BUTTON} action={redirectAboutMe} />
+            <BaseButton value="Currículum" type={TypeButtonEnum.OUTLINE} tag={TagButtonEnum.BUTTON} action={handleShowModal}  />
           </div>
           <ul className="flex items-center gap-3 text-3xl mt-10">
             {
@@ -79,14 +82,12 @@ export function Hero(): JSX.Element {
             }
           </ul>
         </div>
-        <div>
-        </div>
       </div>
       <BaseModal showModal={showModal} handleShowModal={handleShowModal}>
         <iframe src={CvCarlos} className="w-full aspect-[9/10] hidden sm:block" />
         <div className="block sm:hidden">
           <p className="mb-5">No se puede visualizar el PDF en este dispositivo</p>
-          <CustomButton value="Descargar CV" to={CvCarlos} download={true} />
+          <BaseButton value="Descargar CV" to={CvCarlos} download={true} />
         </div>
       </BaseModal>
     </section>

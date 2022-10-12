@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, Hero, Services, Stats } from "./components";
+import { About, Comments, Hero, Services, Stats } from "./components";
 
 export function Home(): JSX.Element {
   return (
@@ -8,6 +8,7 @@ export function Home(): JSX.Element {
       <Stats />
       <About />
       <Services />
+      <Comments />
     </>
   )
 }
