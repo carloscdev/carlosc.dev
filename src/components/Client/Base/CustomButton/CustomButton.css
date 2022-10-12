@@ -1,0 +1,41 @@
+.custom-button {
+  @apply
+    flex w-fit border-2 border-transparent
+    items-center justify-center outline-none
+    rounded text-custom-white cursor-pointer font-semibold;
+}
+
+.custom-button.primary {
+  @apply bg-primary hover:shadow-button;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.custom-button.outline {
+  @apply border-primary;
+}
+
+.custom-button.outline:hover {
+  @apply text-primary;
+}
+
+.custom-button.none:hover {
+  @apply text-primary underline;
+}
+
+.custom-button.large {
+  @apply h-14 px-12 w-full;
+}
+
+.custom-button.medium {
+  @apply h-12 px-6 text-sm;
+}
+
+.custom-button.small {
+  @apply h-8 px-2 text-sm;
+}
+
+@media (max-width: 768px) {
+  .custom-button {
+    @apply w-full;
+  }
+}

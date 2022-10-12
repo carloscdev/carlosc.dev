@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4e73df;
+  --primary-color-light: #7094ff;
+  --secondary-color: #10172a;
+  --secondary-color-light: #4274e74d;
+  --black-color: #1b2c5d;
+  --white-color: #fff;
+  --gray-color: #f1f5f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @apply text-custom-black;
+}
+
+body {
+  @apply bg-custom-gray;
+}
+
+.content {
+  @apply w-[93%] max-w-[1080px] mx-auto;
+}
+
+h2 {
+  font-size: 35px;
+  @apply font-semibold;
+}
+
+.custom-list {
+  @apply ml-5;
+}
+.custom-list li:last-child::before {
+  display: none;
+}
+
+.custom-list li {
+  @apply relative;
+}
+
+.custom-list li::before {
+  content: '';
+  @apply absolute w-[1px] -left-[0.845rem] top-1.5 bg-primary;
+  height: calc(100% + 1.125rem);
+}
+
+.custom-list li::after {
+  content: '';
+  @apply absolute -left-4 top-1.5 w-1.5 h-1.5 rounded-full bg-primary;
+}
+
+.custom-modal main {
+  animation: fade-up 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+  position: relative;
+  bottom: -100vh;
+}
+
+@keyframes fade-up {
+  to {
+    bottom: 0;
+  }
+}
