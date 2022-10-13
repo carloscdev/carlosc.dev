@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BaseModal } from '../../../../components/Client/Base';
 import Design from '../../../../assets/services/design.png'
 import Code from '../../../../assets/services/code.png'
@@ -6,14 +6,18 @@ import Teach from '../../../../assets/services/teach.png'
 import Asesor from '../../../../assets/services/asesor.png'
 import Tutorial from '../../../../assets/services/tutorial.png'
 import { SizeModalEnum } from '../../../../components/Client/Base/BaseModal/base-modal.interface';
+import { useSearchParams } from 'react-router-dom';
 
 interface ServicesInterface {
   icon: string;
   title: string;
+  slug: string;
   description: string;
 }
 
 export function Services(): JSX.Element{
+
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const [showModal, setShowModal] = useState(false);
   const [currentService, setCurrentService] = useState<ServicesInterface>();
@@ -23,6 +27,7 @@ export function Services(): JSX.Element{
   };
 
   const handleCurrentService = (data: ServicesInterface) => {
+    setSearchParams({ modal: data.slug })
     setCurrentService(data);
     handleShowModal();
   };
@@ -31,29 +36,43 @@ export function Services(): JSX.Element{
     {
       icon: Code,
       title: 'Desarrollo Web',
+      slug: 'desarrollo-web',
       description: 'Me gusta codificar cosas desde cero y disfruto dando vida a las ideas en el navegador 💻.'
     },
     {
       icon: Design,
       title: 'Diseño UI',
+      slug: 'diseno-ui',
       description: 'Valoro la estructura de contenido simple, los patrones de diseño limpios y las interacciones bien pensadas 🎨.'
     },
     {
       icon: Teach,
       title: 'Mentorías',
+      slug: 'mentorias',
       description: 'Realmente me preocupo por las personas que van comenzando en el desarrollo front-end y me encanta ayudar compartiendo conocimientos 👨‍🏫.'
     },
     {
       icon: Tutorial,
       title: 'Cursos / Tutoriales',
+      slug: 'cursos-tutoriales',
       description: 'Puedes encontrar todos mis tutoriales en mi canal de Youtube y mis cursos en la plataforma de Udemy 📚.'
     },
     {
       icon: Asesor,
       title: 'Asesorías',
+      slug: 'asesorias',
       description: 'Te ayudo a mejorar tu CV y marca personal para que puedas proyectar una imagen que sobresalga y sea atrayente 🚀.'
     }
   ]
+
+  useEffect(() => {
+    if (searchParams.get('modal')) {
+      const service = serviceList.find((item) => item.slug === searchParams.get('modal')) as ServicesInterface;
+      if (service) {
+        handleCurrentService(service);
+      }
+    }
+  }, [])
 
   return (
     <section className="bg-secondary bg-custom shadow">

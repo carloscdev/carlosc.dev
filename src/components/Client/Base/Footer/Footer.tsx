@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ContactForm, BaseModal, BaseButton } from '../..';
 import { TagButtonEnum } from '../BaseButton/base-button.interface';
 import { SizeModalEnum } from '../BaseModal/base-modal.interface';
+import { useSearchParams } from 'react-router-dom';
 
 export function Footer():JSX.Element {
+
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleShowModal = () => {
     setShowModal(!showModal);
+    setSearchParams({ modal: 'contact' });
   }
+
+  useEffect(() => {
+    if (searchParams.get('modal') === 'contact') {
+      handleShowModal();
+    }
+  }, [])
 
   const footerList = [
     {
@@ -66,8 +76,8 @@ export function Footer():JSX.Element {
             ))
           }
           <div>
-            <h4 className="font-semibold text-center mb-5">
-              Envíame un mensaje
+            <h4 className="font-semibold text-center mb-5 text-sm">
+              ¿Tienes algún comentario, duda o sugerencia?
             </h4>
             <BaseButton value="Contáctame" tag={TagButtonEnum.BUTTON} action={handleShowModal} />
           </div>

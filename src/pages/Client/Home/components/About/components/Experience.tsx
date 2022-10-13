@@ -48,7 +48,7 @@ export function Experience() {
       list: [
         {
           icon: AiOutlineInfoCircle,
-          subtitle: 'Información',
+          subtitle: 'INFORMACIÓN',
           sublist: [
             'Dic 2020 - Junio 2022',
             'Desarrollé interfaces e implementé lógica en el lado del cliente para los nuevos proyectos',
@@ -71,11 +71,11 @@ export function Experience() {
       list: [
         {
           icon: AiOutlineInfoCircle,
-          subtitle: 'Información',
+          subtitle: 'INFORMACIÓN',
           sublist: [
             'Oct 2020 - Dic 2020',
             'Desarrollé interfaces modernas y responsivas',
-            'Mjoré y optimicé interfaces de proyectos antiguos',
+            'Mejoré y optimicé interfaces de proyectos antiguos',
             'Investigué y propuse tecnologías para nuevos proyectos',
           ]
         },
@@ -93,7 +93,7 @@ export function Experience() {
       list: [
         {
           icon: AiOutlineInfoCircle,
-          subtitle: 'Información',
+          subtitle: 'INFORMACIÓN',
           sublist: [
             'Abr 2017 - Ago 2020',
             'Desarrollé e implementé aplicaciones web personalizadas',

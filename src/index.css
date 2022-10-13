@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #1484da;
+  --primary-color: #0672c5;
   --primary-color-light: #349ff1;
   --secondary-color: #1c1e22;
   --secondary-color-light: #31343a;
@@ -92,7 +92,7 @@ input[type="email"],
 input[type="search"],
 select,
 textarea {
-  @apply w-full px-3 h-12 rounded-lg text-sm bg-white text-custom-black focus:outline-none border focus:shadow-button;
+  @apply w-full px-3 h-12 rounded-lg text-sm bg-white text-custom-black focus:outline-none border focus:shadow-inner focus:bg-gray-50;
 }
 textarea {
   @apply h-auto py-3;

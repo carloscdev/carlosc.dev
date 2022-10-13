@@ -1,18 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ModalInterface, SizeModalEnum } from './base-modal.interface';
 import { MdOutlineClose } from 'react-icons/md';
 import './BaseModal.css';
-
+import { useSearchParams } from 'react-router-dom';
 
 export function BaseModal(props: ModalInterface): JSX.Element {
   const { showModal, handleShowModal, children, size } = props;
+  const [firstCharge, setFirstCharge] = useState(true)
+  const [_, setSearchParams] = useSearchParams({});
 
   useEffect(() => {
-    const body = document.querySelector('body') as HTMLElement;
-    if (showModal) {
-      body.classList.add('overflow-y-hidden');
+    if (!firstCharge) {
+      const body = document.querySelector('body') as HTMLElement;
+      if (showModal) {
+        body.classList.add('overflow-y-hidden');
+      } else {
+        body.classList.remove('overflow-y-hidden');
+        setSearchParams({});
+      }
     } else {
-      body.classList.remove('overflow-y-hidden');
+      setFirstCharge(false);
     }
   }, [showModal])
 

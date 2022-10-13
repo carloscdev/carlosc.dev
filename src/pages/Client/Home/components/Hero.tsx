@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BaseModal, BaseButton } from '../../../../components/Client';
 import { AiOutlineGithub, AiOutlineCodepen, AiOutlineYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { SiUdemy } from 'react-icons/si';
 import { TagButtonEnum, TypeButtonEnum } from '../../../../components/Client/Base/BaseButton/base-button.interface';
 import { IconType } from 'react-icons';
 import CvCarlos from '../../../../assets/cv.pdf';
+import { useSearchParams } from 'react-router-dom';
 
 interface SocialListInterface {
   url: string;
@@ -12,6 +13,21 @@ interface SocialListInterface {
 }
 
 export function Hero(): JSX.Element {
+
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+    setSearchParams({ modal: 'cv' });
+  }
+
+  useEffect(() => {
+    if (searchParams.get('modal') === 'cv') {
+      handleShowModal()
+    }
+  }, [])
 
   const socialList: SocialListInterface[] = [
     {
@@ -39,12 +55,6 @@ export function Hero(): JSX.Element {
       icon: AiOutlineTwitter
     }
   ]
-
-  const [showModal, setShowModal] = useState<boolean>(false);
-
-  const handleShowModal = () => {
-    setShowModal(!showModal);
-  }
 
   const redirectAboutMe = () => {
     const about = document.getElementById('about') as HTMLElement;
