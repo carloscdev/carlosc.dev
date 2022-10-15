@@ -51,10 +51,10 @@ export function Experience() {
           subtitle: 'INFORMACIÓN',
           sublist: [
             'Dic 2020 - Junio 2022',
-            'Desarrollé interfaces e implementé lógica en el lado del cliente para los nuevos proyectos',
-            'Migré proyectos antiguos utilizando tecnologías modernas',
-            'Propuse soluciones para mejorar los flujos de la empresa',
-            'Apoyé al equipo de Backend para realizar nuevas APIs'
+            'Desarrollé interfaces e implementé lógica en el lado del cliente para los nuevos proyectos.',
+            'Migré proyectos antiguos utilizando tecnologías modernas.',
+            'Propuse soluciones para mejorar los flujos de la empresa.',
+            'Apoyé al equipo de Backend para realizar nuevas APIs.'
           ]
         },
         {
@@ -74,9 +74,9 @@ export function Experience() {
           subtitle: 'INFORMACIÓN',
           sublist: [
             'Oct 2020 - Dic 2020',
-            'Desarrollé interfaces modernas y responsivas',
-            'Mejoré y optimicé interfaces de proyectos antiguos',
-            'Investigué y propuse tecnologías para nuevos proyectos',
+            'Desarrollé interfaces modernas y responsivas.',
+            'Mejoré y optimicé interfaces de proyectos antiguos.',
+            'Investigué y propuse tecnologías para nuevos proyectos.',
           ]
         },
         {
@@ -96,9 +96,9 @@ export function Experience() {
           subtitle: 'INFORMACIÓN',
           sublist: [
             'Abr 2017 - Ago 2020',
-            'Desarrollé e implementé aplicaciones web personalizadas',
-            'Creé landing pages optimizadas y adaptables',
-            'Trabajé directamente con los clientes durante la planificación y desarrollo de los proyectos'
+            'Desarrollé e implementé aplicaciones web personalizadas.',
+            'Diseñé, Desarrolle e Implementé landing pages optimizadas y adaptables.',
+            'Trabajé directamente con los clientes durante la planificación y desarrollo de los proyectos.'
           ]
         },
         {

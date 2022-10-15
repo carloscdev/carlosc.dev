@@ -4,7 +4,7 @@ export enum SizeModalEnum {
   LARGE= 'w-[1080px]'
 }
 
-export interface ModalInterface {
+export interface PropsModalInterface {
   showModal: boolean;
   handleShowModal: () => void;
   children: React.ReactNode;

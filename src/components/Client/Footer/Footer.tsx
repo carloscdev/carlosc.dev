@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { ContactForm, BaseModal, BaseButton } from '../..';
-import { TagButtonEnum } from '../BaseButton/base-button.interface';
-import { SizeModalEnum } from '../BaseModal/base-modal.interface';
+import { ContactForm, BaseModal, BaseButton, Social } from '../..';
 import { useSearchParams } from 'react-router-dom';
+import { TagButtonEnum } from '../Base/BaseButton/base-button.interface';
+import { SizeModalEnum } from '../Base/BaseModal/base-modal.interface';
 
 export function Footer():JSX.Element {
 
@@ -80,6 +80,9 @@ export function Footer():JSX.Element {
               ¿Tienes algún comentario, duda o sugerencia?
             </h4>
             <BaseButton value="Contáctame" tag={TagButtonEnum.BUTTON} action={handleShowModal} />
+            <div className="mt-3">
+              <Social />
+            </div>
           </div>
         </div>
       </section>

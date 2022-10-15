@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { BaseModal, BaseButton } from '../../../../components/Client';
-import { AiOutlineGithub, AiOutlineCodepen, AiOutlineYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
-import { SiUdemy } from 'react-icons/si';
 import { TagButtonEnum, TypeButtonEnum } from '../../../../components/Client/Base/BaseButton/base-button.interface';
-import { IconType } from 'react-icons';
 import CvCarlos from '../../../../assets/cv.pdf';
 import { useSearchParams } from 'react-router-dom';
+import { Social } from '../../../../components/Client';
 
-interface SocialListInterface {
-  url: string;
-  icon: IconType;
-}
+
 
 export function Hero(): JSX.Element {
 
@@ -29,68 +24,31 @@ export function Hero(): JSX.Element {
     }
   }, [])
 
-  const socialList: SocialListInterface[] = [
-    {
-      url: 'https://www.youtube.com/c/carloscdev/',
-      icon: AiOutlineYoutube
-    },
-    {
-      url: 'https://www.udemy.com/user/carlos-cordova-20/',
-      icon: SiUdemy
-    },
-    {
-      url: 'https://github.com/carloscdev',
-      icon: AiOutlineGithub
-    },
-    {
-      url: 'https://codepen.io/carloscdev',
-      icon: AiOutlineCodepen
-    },
-    {
-      url: 'https://www.instagram.com/carlosc.dev/',
-      icon: AiOutlineInstagram
-    },
-    {
-      url: 'https://twitter.com/carloscdev',
-      icon: AiOutlineTwitter
-    }
-  ]
-
   const redirectAboutMe = () => {
     const about = document.getElementById('about') as HTMLElement;
     window.scroll({ top: about.getBoundingClientRect().y, left: 0, behavior: "smooth" });
   }
 
   return (
-    <section className="md:py-36 py-10 bg-secondary mt-20 min-h-[80vh] flex bg-custom">
-      <div className="text-white content grid md:grid-cols-[1fr,_0.7fr] items-center justify-between gap-5 md:gap-10">
+    <section className="md:py-36 py-10 bg-secondary min-h-[80vh] flex bg-custom">
+      <div className="text-white content grid md:grid-cols-[1fr,_0.7fr] items-center gap-5 md:gap-10">
         <div>
-          <h1 className="text-3xl md:text-[45px] font-semibold md:leading-[3rem]">
+          <h1>
             Carlos Córdova
             <br />
             <span className="text-primary">
             Systems Engineer
             </span>
           </h1>
-          <p className="opacity-70 text-xl py-7">
+          <p className="opacity-70 text-xl py-10">
             Front-end Developer con más de 3 años de experiencia,
             apasianado por la tecnología y la enseñanza online.
           </p>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 mb-10">
             <BaseButton value="Sobre Mi" tag={TagButtonEnum.BUTTON} action={redirectAboutMe} />
             <BaseButton value="Currículum" type={TypeButtonEnum.OUTLINE} tag={TagButtonEnum.BUTTON} action={handleShowModal}  />
           </div>
-          <ul className="flex items-center gap-3 text-3xl mt-10">
-            {
-              socialList.map((item, index) => (
-                <li key={index} className="opacity-70 hover:opacity-100">
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    <item.icon />
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
+          <Social />
         </div>
       </div>
       <BaseModal showModal={showModal} handleShowModal={handleShowModal}>

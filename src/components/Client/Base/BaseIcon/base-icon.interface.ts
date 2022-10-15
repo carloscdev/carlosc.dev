@@ -5,7 +5,7 @@ export enum TypeIconEnum {
   DARK='dark'
 }
 
-export interface PropsInterface {
+export interface PropsIconInterface {
   icon: IconType;
   type?: TypeIconEnum;
   style?: string;

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Footer, Navbar } from '../components/Client/Base';
+import { Footer, Navbar } from '../components/Client';
 import ClientProvider from '../context/client.context';
 
-interface PropsInterface {
+interface PropsClientInterface {
   children: React.ReactElement
 }
 
-export function ClientLayout(props: PropsInterface): JSX.Element {
+export function ClientLayout(props: PropsClientInterface): JSX.Element {
   const { children } = props;
 
   return (

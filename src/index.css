@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #0672c5;
-  --primary-color-light: #349ff1;
+  --primary-color: #4E73DF;
+  --primary-color-light: #6e8ef1;
   --secondary-color: #1c1e22;
   --secondary-color-light: #31343a;
   --black-color: #082b47;
@@ -17,7 +17,10 @@
 
 * {
   box-sizing: border-box;
+  scrollbar-color: var(--secondary-color) #ffffff;
+  scrollbar-width: thin;
 }
+
 
 html {
   @apply text-custom-black;
@@ -28,14 +31,16 @@ html {
 }
 
 body {
-  @apply bg-custom-gray;
+  @apply bg-custom-gray mt-20 overflow-x-hidden;
   background-image: url('./assets/dot.png');
 }
 
 .content {
   @apply w-[93%] max-w-[1080px] mx-auto;
 }
-
+h1 {
+  @apply text-3xl md:text-[45px] font-semibold md:leading-[3rem];
+}
 h2 {
   font-size: 35px;
   @apply font-semibold;
@@ -96,4 +101,20 @@ textarea {
 }
 textarea {
   @apply h-auto py-3;
+}
+
+/* Modales */
+
+.custom-modal {
+  @apply inset-0 bg-black/90 w-screen h-screen fixed z-50 flex items-center justify-center overflow-x-hidden;
+}
+
+.custom-modal .custom-modal-container {
+  animation: fade-up 0.5s ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  position: relative;
+  bottom: -100vh;
+  transform-style: preserve-3d;
+  @apply bg-white overflow-x-hidden rounded-lg mx-auto max-w-[90%] max-h-[90vh] p-10 shadow overflow-y-auto relative;
 }

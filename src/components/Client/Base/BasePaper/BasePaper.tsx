@@ -1,7 +1,7 @@
 import React from 'react';
-import { BasePaperInterface } from './base-paper.interface';
+import { PropsPaperInterface } from './base-paper.interface';
 
-export function BasePaper(props: BasePaperInterface): JSX.Element {
+export function BasePaper(props: PropsPaperInterface): JSX.Element {
 
   const { background, border, children } = props;
 

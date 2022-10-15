@@ -1,10 +1,10 @@
 import React from 'react';
 import './BaseButton.css';
 import { Link } from 'react-router-dom';
-import { PropsInterface, SizeButtonEnum, TagButtonEnum, TypeButtonEnum } from './base-button.interface';
+import { PropsButtonInterface, SizeButtonEnum, TagButtonEnum, TypeButtonEnum } from './base-button.interface';
 
 
-export function BaseButton(props: PropsInterface): JSX.Element {
+export function BaseButton(props: PropsButtonInterface): JSX.Element {
   const {
     tag,
     type,

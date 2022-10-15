@@ -1,7 +1,6 @@
 import React from 'react';
 import { AiFillLinkedin } from 'react-icons/ai';
-import { BasePaper } from '../../../../../../components/Client/Base';
-import PhotoProfile from '../../../../../../assets/me.jpg';
+import { Photo, BasePaper } from '../../../../../../components/Client';
 
 export function Profile(): JSX.Element{
   return (
@@ -10,7 +9,7 @@ export function Profile(): JSX.Element{
       <BasePaper>
         <section className="p-10">
           <div className="flex items-center gap-5 mb-5">
-            <img src={PhotoProfile} alt="carloscdev" width="60" height="60" className="rounded-full" />
+            <Photo />
             <div className="w-full">
               <h5 className="font-semibold flex items-center justify-between">
                 <span>Carlos Córdova</span>

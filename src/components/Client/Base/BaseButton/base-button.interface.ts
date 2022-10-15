@@ -16,7 +16,7 @@ export enum SizeButtonEnum {
   SMALL='small'
 }
 
-export interface PropsInterface {
+export interface PropsButtonInterface {
   tag?: TagButtonEnum;
   type?: TypeButtonEnum;
   size?: SizeButtonEnum;

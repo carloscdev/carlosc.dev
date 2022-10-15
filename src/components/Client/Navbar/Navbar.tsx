@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BaseButton } from '../BaseButton';
-import { SizeButtonEnum, TagButtonEnum, TypeButtonEnum } from '../BaseButton/base-button.interface';
+import { BaseButton } from '../Base/BaseButton';
+import { SizeButtonEnum, TagButtonEnum, TypeButtonEnum } from '../Base/BaseButton/base-button.interface';
 
 export function Navbar() {
   const { pathname } = useLocation()
@@ -12,7 +12,7 @@ export function Navbar() {
       name: 'Sobre Mi'
     },
     {
-      path: '/test',
+      path: '/cursos',
       name: 'Cursos'
     }
   ]
