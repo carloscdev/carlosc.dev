@@ -13,6 +13,7 @@ interface ServicesInterface {
   title: string;
   slug: string;
   description: string;
+  list: string[];
 }
 
 export function Services(): JSX.Element{
@@ -37,31 +38,36 @@ export function Services(): JSX.Element{
       icon: Code,
       title: 'Desarrollo Web',
       slug: 'desarrollo-web',
-      description: 'Me gusta codificar cosas desde cero y disfruto dando vida a las ideas en el navegador 💻.'
+      description: 'Me gusta codificar cosas desde cero y disfruto dando vida a las ideas en el navegador 💻.',
+      list: ['Desarrollo Front-end', 'Desarrollo Backend', 'Base de Datos']
     },
     {
       icon: Design,
       title: 'Diseño UI',
       slug: 'diseno-ui',
-      description: 'Valoro la estructura de contenido simple, los patrones de diseño limpios y las interacciones bien pensadas 🎨.'
+      description: 'Valoro la estructura de contenido simple, los patrones de diseño limpios y las interacciones bien pensadas 🎨.',
+      list: ['Diseño de Interfaces', 'Paleta de colores']
     },
     {
       icon: Teach,
       title: 'Mentorías',
       slug: 'mentorias',
-      description: 'Realmente me preocupo por las personas que van comenzando en el desarrollo front-end y me encanta ayudar compartiendo conocimientos 👨‍🏫.'
+      description: 'Realmente me preocupo por las personas que van comenzando en el desarrollo front-end y me encanta ayudar compartiendo conocimientos 👨‍🏫.',
+      list: ['Reuniones Online', 'Preguntas por Discord']
     },
     {
       icon: Tutorial,
       title: 'Cursos / Tutoriales',
       slug: 'cursos-tutoriales',
-      description: 'Puedes encontrar todos mis tutoriales en mi canal de Youtube y mis cursos en la plataforma de Udemy 📚.'
+      description: 'Puedes encontrar todos mis tutoriales en mi canal de Youtube y mis cursos en la plataforma de Udemy 📚.',
+      list: ['Cursos en Udemy', 'Tutoriales en Youtube']
     },
     {
       icon: Asesor,
       title: 'Asesorías',
       slug: 'asesorias',
-      description: 'Te ayudo a mejorar tu CV y marca personal para que puedas proyectar una imagen que sobresalga y sea atrayente 🚀.'
+      description: 'Te ayudo a mejorar tu CV y marca personal para que puedas proyectar una imagen que sobresalga y sea atrayente 🚀.',
+      list: ['Tips para CV', 'Mejora tu marca personal']
     }
   ]
 
@@ -107,9 +113,18 @@ export function Services(): JSX.Element{
               <h3 className="font-semibold text-lg">{ currentService?.title }</h3>
             </div>
             <hr />
-            <p className="pt-10">
+            <p className="pt-10 mb-5">
               { currentService?.description }
             </p>
+            <ul className="text-sm custom-list opacity-70">
+              {
+                currentService?.list.map((item, index) => (
+                  <li className="mb-3" key={index}>
+                    { item }
+                  </li>
+                ))
+              }
+            </ul>
           </section>
       </BaseModal>
     </section>
