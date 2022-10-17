@@ -23,15 +23,15 @@ export function Video(props: PropsVideoInterface): JSX.Element{
       <BasePaper>
         <section className="p-10">
           <iframe
-            src={`https://www.youtube.com/embed/${video?.url?.slice(-11)}?rel=0&color=white&showinfo=0`}
+            src={`https://www.youtube.com/embed/${video?.id?.videoId}?rel=0&color=white&showinfo=0`}
             className="w-full aspect-video mb-5"
-            title={video.title}
+            title={video?.snippet?.title}
             allowFullScreen
           />
-          <h5 className="text-sm font-semibold">{ video.title }</h5>
-          <small>{ formateDate(video.date_published) }</small>
+          <h5 className="text-sm font-semibold">{ video?.snippet?.title }</h5>
+          <small>{ formateDate(video?.snippet?.publishedAt) }</small>
           <br />
-          <a href={video.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary flex items-center gap-1 mt-3">
+          <a href={`https://www.youtube.com/watch?v=${video?.id?.videoId}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary flex items-center gap-1 mt-3">
             <AiOutlineYoutube />
             <small>Ver en Youtube</small>
           </a>
