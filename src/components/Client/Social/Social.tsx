@@ -42,7 +42,7 @@ export function Social(): JSX.Element {
       {
         socialList.map((item, index) => (
           <li key={index} className="opacity-70 hover:opacity-100">
-            <a href={item.url} target="_blank" rel="noopener noreferrer">
+            <a href={item.url} target="_blank" rel="noopener noreferrer" title="Icon Social Media">
               <item.icon />
             </a>
           </li>

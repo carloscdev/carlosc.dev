@@ -23,15 +23,6 @@ export function Footer():JSX.Element {
 
   const footerList = [
     {
-      title: 'Proyectos Random',
-      projects: [
-        { title: 'Custom Linktree', url: 'https://github.com/carloscdev/linktree-carloscdev' },
-        { title: 'Simpsons API', url: 'https://github.com/carloscdev/nestjs-simpsons-api' },
-        { title: 'Agenda Personal', url: 'https://github.com/carloscdev/django-agenda-personal' },
-        { title: 'Lista de Tareas', url: 'https://github.com/carloscdev/take-notes-backend-carloscdev' },
-      ]
-    },
-    {
       title: '¿Necesitas Ayuda?',
       projects: [
         { title: 'Comunidad Discord', url: 'https://discord.gg/z9XxP4n9' },
@@ -41,12 +32,21 @@ export function Footer():JSX.Element {
       ]
     },
     {
-      title: 'Últimos Videos',
+      title: 'Proyectos Random',
       projects: [
-        { title: 'Palindrome Game', url: 'https://youtu.be/iVIlul7h0Jk' },
-        { title: 'Digital Clock', url: 'https://youtu.be/AMS2fbcgA14' },
-        { title: 'Dibujando con CSS', url: 'https://youtu.be/OveoOOc8bz8' },
-        { title: 'Botones 3D', url: 'https://youtu.be/zVu4KM6oM4s' },
+        { title: 'Custom Linktree', url: 'https://github.com/carloscdev/linktree-carloscdev' },
+        { title: 'Simpsons API', url: 'https://github.com/carloscdev/nestjs-simpsons-api' },
+        { title: 'Agenda Personal', url: 'https://github.com/carloscdev/django-agenda-personal' },
+        { title: 'Lista de Tareas', url: 'https://github.com/carloscdev/take-notes-backend-carloscdev' },
+      ]
+    },
+    {
+      title: 'Videos Populares',
+      projects: [
+        { title: 'Zombie con CSS', url: 'https://youtu.be/YoMMqUR6IVk' },
+        { title: 'Efectos para botones', url: 'https://youtu.be/55bW27rIPzI' },
+        { title: 'Gráficos con Chart JS', url: 'https://youtu.be/eyTKJmN-I2o' },
+        { title: 'Extensiones para VSC', url: 'https://youtu.be/N-vS7LnTcYQ' },
       ]
     }
   ]

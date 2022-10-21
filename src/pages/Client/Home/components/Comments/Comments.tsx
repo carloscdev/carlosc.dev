@@ -70,7 +70,7 @@ export function Comments(): JSX.Element {
               <BasePaper>
                 <div className="p-10">
                   <div className="flex items-center gap-3 mb-5">
-                    <img src={item.image} alt={item.name} width="50" />
+                    <img src={item.image} alt={item.name} width="50" height="50" />
                     <a className="font-semibold" href={item.url} target="_blank" rel="noopener noreferrer">
                       { item.name }
                       <HiOutlineExternalLink className="inline ml-3" />

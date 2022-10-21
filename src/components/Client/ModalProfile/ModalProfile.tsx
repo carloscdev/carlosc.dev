@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { BaseModal } from '../Base';
-import { SizeModalEnum } from '../Base/BaseModal/base-modal.interface';
 import { PropsModalProfileInterface } from './modal-profile.interface';
 import PhotoProfile from '../../../assets/me.jpg';
 import Js from '../../../assets/stack/js.svg';
@@ -11,7 +9,7 @@ import VueJs from '../../../assets/stack/vue.svg';
 import ReactJs from '../../../assets/stack/react.svg';
 import NodeJs from '../../../assets/stack/node.svg';
 import Python from '../../../assets/stack/python.svg';
-import { FaFireAlt, FaCheckCircle } from 'react-icons/fa';
+import { FaFireAlt, FaCheckCircle, FaUserFriends } from 'react-icons/fa';
 import { MdOutlineClose } from 'react-icons/md';
 
 export function ModalProfile(props: PropsModalProfileInterface): JSX.Element {
@@ -27,7 +25,7 @@ export function ModalProfile(props: PropsModalProfileInterface): JSX.Element {
 
   const itemList = [
     { title: 'Experiencia', data: '+ 3 años', icon: FaFireAlt },
-    { title: 'Alumnos', data: '+ 16k', icon: FaCheckCircle },
+    { title: 'Alumnos', data: '+ 16k', icon: FaUserFriends },
     { title: 'Freelance', data: 'Disponible', icon: FaCheckCircle },
   ];
 

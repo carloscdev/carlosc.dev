@@ -109,7 +109,7 @@ export function Services(): JSX.Element{
       <BaseModal showModal={showModal} handleShowModal={handleShowModal} size={SizeModalEnum.SMALL} >
           <section>
             <div className="flex items-center gap-5">
-              <img src={currentService?.icon} alt={currentService?.title} width="70" />
+              <img src={currentService?.icon} alt={currentService?.title} width="70" height="70" />
               <h3 className="font-semibold text-lg">{ currentService?.title }</h3>
             </div>
             <hr />
