@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { PropsModalProfileInterface } from './modal-profile.interface';
-import PhotoProfile from '../../../assets/me.jpg';
+import PhotoProfile from '../../../assets/me.webp';
 import Js from '../../../assets/stack/js.svg';
 import Ts from '../../../assets/stack/ts.svg';
 import Mongo from '../../../assets/stack/mongo.svg';

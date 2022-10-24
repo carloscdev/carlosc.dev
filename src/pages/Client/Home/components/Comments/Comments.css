@@ -2,7 +2,7 @@
   @apply mt-10 flex items-center justify-center gap-1;
 }
 .tns-nav button {
-  @apply bg-white h-3 w-5 rounded-full border;
+  @apply bg-white h-4 w-6 rounded-full border;
 }
 .tns-nav button.tns-nav-active {
   @apply bg-primary border-none;

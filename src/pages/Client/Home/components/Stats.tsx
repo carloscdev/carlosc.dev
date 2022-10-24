@@ -44,7 +44,7 @@ export function Stats() {
               <li key={index}>
                 <div className="flex items-center gap-1 mb-5">
                   <BaseIcon icon={item.icon} type={TypeIconEnum.LIGHT} />
-                  <h3 className="text-xl font-semibold">{item.stat}</h3>
+                  <p className="text-xl font-semibold">{item.stat}</p>
                 </div>
                 <p className="font-light text-sm">
                   {item.description}

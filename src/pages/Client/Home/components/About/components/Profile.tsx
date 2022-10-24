@@ -13,7 +13,7 @@ export function Profile(): JSX.Element{
             <div className="w-full">
               <h5 className="font-semibold flex items-center justify-between">
                 <span>Carlos Córdova</span>
-                <a href="https://www.linkedin.com/in/carloscdev/" target="_blank" rel="noopener noreferrer" className="text-lg">
+                <a href="https://www.linkedin.com/in/carloscdev/" target="_blank" rel="noopener noreferrer" className="text-lg" title="Linkedin @carloscdev">
                   <AiFillLinkedin />
                 </a>
               </h5>

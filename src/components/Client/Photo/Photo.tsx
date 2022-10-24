@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import PhotoProfile from '../../../assets/me.jpg';
+import PhotoProfile from '../../../assets/me.webp';
 import { ModalProfile } from '../..';
 
 export function Photo(): JSX.Element {
