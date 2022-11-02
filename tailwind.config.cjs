@@ -10,7 +10,7 @@ module.exports = {
         "primary-light": "var(--primary-color-light)",
         "secondary": "var(--secondary-color)",
         "secondary-light": "var(--secondary-color-light)",
-        "custom-black": "var(--black-color)",
+        "custom-black": "var(--secondary-color)",
         "custom-gray": "var(--gray-color)",
       },
       boxShadow: {

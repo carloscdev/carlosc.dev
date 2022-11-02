@@ -8,7 +8,7 @@
   --primary-color: #0660c0;
   --primary-color-light: #2b80db;
   --secondary-color: #171a1f;
-  --secondary-color-light: #3e4042;
+  --secondary-color-light: #323435;
   --black-color: #082b47;
   --gray-color: #f1f5f9;
 }
@@ -39,7 +39,7 @@ body {
   @apply w-[93%] max-w-[1080px] mx-auto;
 }
 h1 {
-  @apply text-3xl md:text-[45px] font-semibold md:leading-[3rem];
+  @apply text-3xl md:text-[45px] font-semibold md:leading-[3rem] opacity-0 -translate-y-10;
 }
 h2 {
   font-size: 35px;
