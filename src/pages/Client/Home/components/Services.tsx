@@ -85,7 +85,9 @@ export function Services(): JSX.Element{
       <div className="py-20 content text-white grid md:grid-cols-[0.4fr,_1fr] gap-10 text-sm">
         <div>
           <h3 className="text-3xl font-semibold mb-5">
-            ¿Interesado en trabajar conmigo?
+            Freelance
+            <br />
+            <span className="text-lime-500 animate-pulse">Disponible</span>
           </h3>
           <p className="opacity-70">
             Mis principales competencias profesionales están relacionadas al desarrollo / diseño web, creación de contenido audiovisual y enseñanza online.
@@ -102,7 +104,7 @@ export function Services(): JSX.Element{
           }
           <li className="flex flex-col items-center justify-center gap-3 px-1 h-full rounded-lg">
             <h4 className="text-center font-semibold">¿Buscas algo más personalizado?</h4>
-            <a href="https://api.whatsapp.com/send?phone=51962666663" target="_blank" rel="noopener noreferrer" className="text-primary-light underline">Contactar</a>
+            <a href="https://api.whatsapp.com/send?phone=51962666663" target="_blank" rel="noopener noreferrer" className="text-lime-500 underline">Contactar</a>
           </li>
         </ul>
       </div>

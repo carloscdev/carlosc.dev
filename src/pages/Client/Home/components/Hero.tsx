@@ -23,8 +23,8 @@ export function Hero(): JSX.Element {
       handleShowModal()
     }
     timeline
-      .to('h1', { opacity: 1, y: 0 })
-      .to('.hero p', { opacity: 0.7, y: 0 }, '-=0.5')
+      .to('#hero h1', { opacity: 1, y: 0 })
+      .to('#hero p', { opacity: 0.7, y: 0 }, '-=0.5')
   }, []);
 
   const redirectAboutMe = () => {
@@ -33,9 +33,9 @@ export function Hero(): JSX.Element {
   }
 
   return (
-    <section className="md:py-36 py-10 bg-secondary min-h-[80vh] flex bg-custom hero">
+    <section className="md:py-36 py-10 bg-secondary min-h-[80vh] flex bg-custom">
       <div className="text-white content grid md:grid-cols-[1fr,_0.7fr] items-center gap-5 md:gap-10">
-        <div>
+        <div id="hero">
           <h1>
             Carlos Córdova
             <br />

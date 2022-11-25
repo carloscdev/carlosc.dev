@@ -13,13 +13,13 @@ export function Hero():JSX.Element {
     <section className="py-40 bg-custom bg-secondary">
       <div className="content text-white grid md:grid-cols-[1fr,_0.7fr] items.center gap-5">
         <div>
-          <h1>
+          <h2>
             Cursos y Tutoriales
             <br />
             <span className="text-primary">
               100% Gratuitos
             </span>
-          </h1>
+          </h2>
           <p className="opacity-70 text-xl py-10">
           Cada video lo realizo con mi mayor esfuerzo y siempre
           estoy en constante aprendizaje para ofrecer una mejor calidad.
