@@ -25,9 +25,9 @@ export function Footer():JSX.Element {
     {
       title: '¿Necesitas Ayuda?',
       projects: [
-        { title: 'Comunidad Discord', url: 'https://discord.gg/z9XxP4n9' },
+        { title: 'Comunidad Discord', url: 'https://discord.gg/rtMf4B7G' },
         { title: 'Canal de Youtube', url: 'https://www.youtube.com/c/carloscdev' },
-        { title: 'DM Instagram', url: 'https://instagram.com/carloscdev' },
+        { title: 'DM Instagram', url: 'https://instagram.com/carlosc.dev' },
         { title: 'DM Twitter', url: 'https://twitter.com/carloscdev' },
       ]
     },
