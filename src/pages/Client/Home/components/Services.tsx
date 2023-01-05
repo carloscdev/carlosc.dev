@@ -104,7 +104,7 @@ export function Services(): JSX.Element{
           }
           <li className="flex flex-col items-center justify-center gap-3 px-1 h-full rounded-lg">
             <h4 className="text-center font-semibold">¿Buscas algo más personalizado?</h4>
-            <a href="https://api.whatsapp.com/send?phone=51962666663" target="_blank" rel="noopener noreferrer" className="text-lime-500 underline">Contactar</a>
+            <a href="https://www.linkedin.com/in/carloscdev/" target="_blank" rel="noopener noreferrer" className="text-lime-500 underline">Contactar</a>
           </li>
         </ul>
       </div>
